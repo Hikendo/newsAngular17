@@ -1,0 +1,102 @@
+<app-title [title]="'Control Flow'"  withShadow></app-title>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5"> if {{showContent()}} </h2>
+    <button (click)="toogleContent()" class="bg-lime-600 p-2 rounded text-white">Toogle Content</button>
+    <div class="mt-2">
+    @if (showContent()) {
+      <h3>Contenido Mostrado por show Content</h3>
+    }
+    @else {
+      <h3>Esto se muestra si showContent esta en false</h3>
+    }
+
+  </div>
+  </div>
+
+
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h1 class="text-2xl font-bold mb-5">Switch Case</h1>
+    <hr>
+    <form [formGroup]="numberGrade" (ngSubmit)="setGrade()">
+      <input type="number" min="0" max="100"
+      formControlName="gardeNum"
+      class="bg-slate-600 text-yellow-200 p-2 rounded" placeholder="calificar 0 - 100">
+      <button type="submit" [disabled]="numberGrade.invalid"
+      class="bg-lime-600 p-2 rounded text-white"
+      >Enviar</button>
+    </form>
+
+    <div class="mt-4">
+      @switch (grade()) {
+        @case ('A') {
+          <h1>Aprobaste con HONORES</h1>
+        }
+        @case ('B') {
+          <h1>Aprobaste, SIGUE ESFORZÁNDOTE</h1>
+        }
+        @case ('C') {
+          <h1>Aprobaste PERO DEBES MEJORAR</h1>
+        }
+        @case ('D') {
+          <h1>Aprobaste DE MILAGRO</h1>
+        }
+        @default{
+          <h1>HAS REPROBADO</h1>
+        }
+
+      }
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">  For  </h2>
+    <ul>
+        @for (framework of frameworks(); track frameworks; let i = $index,
+        first= $first, last = $last, even= $even, odd= $odd, count= $count ) {
+          <!--operaciones booleanes tailwind y angular
+
+          -->
+          <li
+          [class]="{
+            'bg-red-700': even && !first && !last,
+            'bg-purple-300': odd && !first && !last,
+            'bg-green-400': first || last,
+          }"
+
+          > {{i + 1}} / {{count}} - {{framework}}</li>
+        }
+    </ul>
+
+
+  </div>
+
+
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">  For  Empty</h2>
+    <ul>
+        @for (v of vacio(); track $index) {
+          <li>{{v}}</li>
+        } @empty {
+          <li> Este elemento esta vacio</li>
+        }
+    </ul>
+
+
+  </div>
+
+
+</section>
