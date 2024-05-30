@@ -1,1 +1,30 @@
-<p>defer-views works!</p>
+<app-title title="Defer Views / Blocks"></app-title>
+<section>
+<h1>Probando el Defer vs bloqueantes</h1>
+  @defer () {
+    <app-heavy-loaders-slow>1</app-heavy-loaders-slow>
+  }
+  @placeholder {
+    <p class="h-[600px] w-full bg-gradient-to-r from-red-300 to-green-700 animate-pulse text-center text-8xl"
+    >Loading!</p>
+
+  }
+  @defer (on idle) {
+    <app-heavy-loaders-slow>1</app-heavy-loaders-slow>
+  }
+  @placeholder {
+    <p class="h-[800px] w-full bg-gradient-to-r from-orange-300 to-green-700 animate-pulse text-center text-8xl"
+    >Loading!</p>
+
+  }
+  @defer (on viewport) {
+    <app-heavy-loaders-slow>1</app-heavy-loaders-slow>
+  }
+  @placeholder {
+    <p class="h-[200px] w-full bg-gradient-to-r from-blue-300 to-green-700 animate-pulse text-center text-8xl"
+    >Loading!</p>
+
+  }
+
+
+</section>
