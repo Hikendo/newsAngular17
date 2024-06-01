@@ -1,0 +1,71 @@
+{
+  "perfil_profesional": {
+    "nombre": "Juan Pérez",
+    "datos_personales": {
+      "correo_electronico": "juan.perez@example.com",
+      "telefono": "+34 123 456 789",
+      "direccion": "Calle Falsa 123, Madrid, España",
+      "linkedin": "https://www.linkedin.com/in/juanperez",
+      "github": "https://github.com/juanperez"
+    },
+    "resumen": "Ingeniero de software con más de 8 años de experiencia en el desarrollo de aplicaciones web y móviles. Especializado en tecnologías frontend y backend, con un fuerte enfoque en la calidad del código y la eficiencia del desarrollo. Hábil en trabajar en entornos ágiles y colaborativos.",
+    "experiencia_laboral": [
+      {
+        "puesto": "Ingeniero de Software Senior",
+        "empresa": "Tech Solutions S.A.",
+        "fecha_inicio": "enero 2020",
+        "fecha_fin": "presente",
+        "responsabilidades": [
+          "Desarrollo y mantenimiento de aplicaciones web utilizando React y Node.js",
+          "Liderar un equipo de 5 desarrolladores en proyectos ágiles",
+          "Implementar pruebas automatizadas y garantizar la calidad del código"
+        ]
+      },
+      {
+        "puesto": "Desarrollador de Software",
+        "empresa": "Innovatech Ltd.",
+        "fecha_inicio": "marzo 2015",
+        "fecha_fin": "diciembre 2019",
+        "responsabilidades": [
+          "Desarrollo de aplicaciones móviles con React Native",
+          "Colaboración con diseñadores y analistas de negocios para definir los requisitos del proyecto",
+          "Mantenimiento de aplicaciones existentes y resolución de bugs"
+        ]
+      }
+    ],
+    "educacion": [
+      {
+        "grado": "Ingeniería Informática",
+        "institucion": "Universidad Politécnica de Madrid",
+        "fecha_inicio": "septiembre 2010",
+        "fecha_fin": "junio 2014"
+      }
+    ],
+    "habilidades": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "React Native",
+      "HTML/CSS",
+      "Git",
+      "Metodologías ágiles"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Español",
+        "nivel": "Nativo"
+      },
+      {
+        "idioma": "Inglés",
+        "nivel": "Avanzado"
+      }
+    ],
+    "certificaciones": [
+      {
+        "nombre": "Certified Scrum Master",
+        "institucion": "Scrum Alliance",
+        "fecha_obtencion": "mayo 2018"
+      }
+    ]
+  }
+}
